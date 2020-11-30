@@ -3,6 +3,8 @@ TinyXML-2
 
 [![TravisCI Status](https://travis-ci.org/leethomason/tinyxml2.svg?branch=master)](https://travis-ci.org/leethomason/tinyxml2) [![AppVeyor Status](https://ci.appveyor.com/api/projects/status/github/leethomason/tinyxml2?branch=master&svg=true)](https://ci.appveyor.com/project/leethomason/tinyxml2)
 
+![C/C++ CI Unixish](https://github.com/leethomason/tinyxml2/workflows/C/C++%20CI%20Unixish/badge.svg)
+
 ![TinyXML-2 Logo](http://www.grinninglizard.com/tinyxml2/TinyXML2_small.png)
 
 TinyXML-2 is a simple, small, efficient, C++ XML parser that can be
@@ -262,10 +264,23 @@ There are 2 files in TinyXML-2:
 And additionally a test file:
 * xmltest.cpp
 
-Simply compile and run. There is a visual studio 2017 project included, a simple Makefile,
+Simply compile and run. There is a visual studio 2019 project included, a simple Makefile,
 an Xcode project, a Code::Blocks project, and a cmake CMakeLists.txt included to help you.
 The top of tinyxml.h even has a simple g++ command line if you are using Unix/Linux/BSD and
 don't want to use a build system.
+
+Building TinyXML-2 - Using vcpkg
+--------------------------------
+
+You can download and install TinyXML-2 using the [vcpkg](https://github.com/Microsoft/vcpkg) dependency manager:
+
+    git clone https://github.com/Microsoft/vcpkg.git
+    cd vcpkg
+    ./bootstrap-vcpkg.sh
+    ./vcpkg integrate install
+    ./vcpkg install tinyxml2
+
+The TinyXML-2 port in vcpkg is kept up to date by Microsoft team members and community contributors. If the version is out of date, please [create an issue or pull request](https://github.com/Microsoft/vcpkg) on the vcpkg repository.
 
 Versioning
 ----------
